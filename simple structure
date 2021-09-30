@@ -1,0 +1,12 @@
+if(1){
+    console.log("This statement will always execute because conditional is set to 1 i.e., true");
+}
+
+
+
+if(0){
+        console.log("This statement will NEVER execute because conditional is set to 0 i.e., false");
+}
+else{
+  console.log("This statement will execute because conditional is set to 0 i.e., false, so the \"else\" is carring out");
+}
