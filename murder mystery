@@ -1,0 +1,50 @@
+the poison belongs to the ballroom,
+the trophy belongs to the gallery,
+the pool stick belongs to the billiards room,
+and the knife belongs to the dining room.
+And we know that each suspect was located in a specific room at the time of the murder.
+
+Mr. Parkes was located in the dining room.
+Ms. Van Cleve was located in the gallery.
+Mrs. Sparr was located in the billiards room.
+Mr. Kalehoff was located in the ballroom.
+
+var room = "gallery";
+
+// A suspect can be either of - Mr. Parkes, Ms. Van Cleve, Mrs. Sparr, or Mr. Kalehoff
+// Test your code by giving matching as well as unmatching names of the suspect
+var suspect = "Ms. Van Cleve"; 
+
+/* ****************************************** */
+
+/* IMPLEMENTATION LOGIC*/
+
+// Initial values
+var weapon = "";
+var solved = false;
+
+/*
+* To help solve this mystery, write a combination of conditional statements that:
+* 1. sets the value of weapon based on the room and
+* 2. sets the value of solved to true if the value of room matches the suspect's room
+*/
+if (room === "ballroom") {weapon = "poison" ;
+if(suspect==="Mr. Kalehoff") solved = true;
+}  
+else if (room === "gallery") {weapon = "trophy";
+if(suspect==="Ms. Van Cleve") solved = true;
+}
+else if (room === "billiards room") {weapon = "pool stick";
+if(suspect==="Mrs. Sparr") solved = true;
+}
+else if (room === "dining room"){weapon = "knife";
+if(suspect==="Mr. Parkes") solved = true;
+}
+
+/* ****************************************** */
+// The code below will run only when `solved` is true
+if (solved) {
+	console.log(suspect + " did it in the " + room +" with the " + weapon + "!");
+}
+else console.log("mystery");
+/* ****************************************** */
